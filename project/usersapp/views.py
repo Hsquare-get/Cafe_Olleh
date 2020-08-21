@@ -44,4 +44,8 @@ def forgot(request):
     return render(request, 'forgot.html')
 
 def pwreset(request):
-    return render(request, 'pwreset.html')
+    if request.method == 'POST':
+        password = request.POST.get('password',None)
+        return redirect('/mainapp/home/')
+    else:
+        return render(request, 'pwreset.html')

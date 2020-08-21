@@ -12,7 +12,7 @@ $(function() {
 			html: 'Show',
 			class: 'btn btn-primary btn-sm',
 			id: 'passeye-toggle-'+i,
-			style: 'background-color:#4d3319;position:absolute;right:10px;top:50%;transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;'
+			style: 'background-color:#4d3319; border-color:#4d3319; position:absolute;right:10px;top:50%;transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;'
 		}));
 		$this.after($("<input/>", {
 			type: 'hidden',
@@ -28,7 +28,7 @@ $(function() {
 				$(this).removeClass("btn-outline-primary");
 			}else{
 				$this.attr('type', 'text');
-				$this.val($("#passeye-"+i).val());				
+				$this.val($("#passeye-"+i).val());
 				$this.addClass("show");
 				$(this).addClass("btn-outline-primary");
 			}
