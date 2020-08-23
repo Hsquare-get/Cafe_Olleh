@@ -48,10 +48,14 @@
 				          <li><a href="#coffee">Coffee</a></li>
 				          <li><a href="#review">FAQ</a></li>
 				          <li><a href="{% url 'usersapp:login' %}">Log in</a></li>
-							<li class="menu-has-children"><a href="">{{username}}</a>
-				            <ul>
-				              <li><a href="generic.html">Generic</a></li>
-				              <li><a href="elements.html">Elements</a></li>
+							{% if user.is_active %}
+								<li class="menu-has-children">{{ usrs.username }}</a>
+				            	<ul>
+				              	<li><a href="generic.html">Generic</a></li>
+				              	<li><a href="elements.html">Elements</a></li>
+				            {% endif %}
+
+
 
 				            </ul>
 				          </li>
